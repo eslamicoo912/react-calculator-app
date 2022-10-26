@@ -4,7 +4,6 @@ import "./App.css";
 
 const App = () => {
   const [calc, setCalc] = useState("");
-  const [result, setResult] = useState("");
 
   const ops = ["/", "*", "+", "-", "."];
 
@@ -15,7 +14,6 @@ const App = () => {
     )
       return;
     setCalc(calc + value);
-    if (!ops.includes(value)) setResult(eval(calc + value).toString());
   };
 
   const createDigits = () => {
@@ -42,7 +40,6 @@ const App = () => {
 
   const acClick = () => {
     setCalc("");
-    setResult("");
   };
 
   return (
